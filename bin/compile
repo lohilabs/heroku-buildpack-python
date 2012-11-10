@@ -209,8 +209,8 @@ WKHTMLTOPDF_BINARY="https://s3.amazonaws.com/static.vascepaspeakers.com/wkhtmlto
 WKHTMLTOPDF_VENDOR="vendor/wkhtmltopdf"
 
 # vendor awesome-vm
-mkdir -p $1/WKHTMLTOPDF_VENDOR
-curl $WKHTMLTOPDF_BINARY -o - | tar -xvz -C $1/WKHTMLTOPDF_VENDOR -f -
+mkdir -p $1/$WKHTMLTOPDF_VENDOR
+curl $WKHTMLTOPDF_BINARY -o - | tar -xvz -C $1/$WKHTMLTOPDF_VENDOR -f -
 
 # Install dependencies with Pip.
 puts-step "Installing dependencies using pip version $(pip --version | awk '{print $2}')"
